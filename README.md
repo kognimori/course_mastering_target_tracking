@@ -1,5 +1,8 @@
 # Kalman Filter with Simulator
 
+<img width="1600" height="900" alt="Screenshot from 2026-06-23 19-28-55" src="https://github.com/user-attachments/assets/f373eced-9ccb-4bd9-8c30-0511b3b60b1e" />
+
+
 An interactive python Dash dashboard for simulating 2-D kinematic scenarios and evaluating Extended Kalman Filter (EKF) performance against ground-truth trajectories meant as a supplementary material for the course https://www.udemy.com/course/mastering-target-tracking-for-adas-autonomous-driving/?referralCode=C63D0
 
 ---
