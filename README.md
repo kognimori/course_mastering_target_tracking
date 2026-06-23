@@ -1,6 +1,6 @@
-# object tracking
+# Kalman Filter with Simulator
 
-An interactive python Dash dashboard for simulating 2-D kinematic scenarios and evaluating Extended Kalman Filter (EKF) performance against ground-truth trajectories.
+An interactive python Dash dashboard for simulating 2-D kinematic scenarios and evaluating Extended Kalman Filter (EKF) performance against ground-truth trajectories meant as a supplementary material for the course https://www.udemy.com/course/mastering-target-tracking-for-adas-autonomous-driving/?referralCode=C63D0
 
 ---
 
