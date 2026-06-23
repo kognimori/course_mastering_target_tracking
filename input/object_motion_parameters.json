@@ -1,0 +1,18 @@
+{
+	"x" 			: [],
+	"y" 			: [],
+	"yaw" 			: [],
+
+	"vx" 			: [],
+	"vy" 			: [],
+	"yawrate" 		: [],
+
+	"ax" 			: [],
+	"ay" 			: [],
+	"yawraterate" 	: [],
+	
+	"speed" 		: [],
+	"acceleration" 	: [],
+
+	"timestamps" 	: []
+}

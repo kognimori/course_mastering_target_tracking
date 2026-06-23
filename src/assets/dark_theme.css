@@ -1,0 +1,175 @@
+/* ============================================================
+   Dark Ops Terminal — Dash 4.x component overrides
+   Dash 4.x uses its own dash-dropdown-* components with
+   CSS custom properties. The popup menu uses Radix UI Popover
+   (teleported to document body), so overrides must target both
+   the trigger element and .dash-dropdown-content directly.
+   ============================================================ */
+
+/* ---------- Override Dash design tokens on trigger side ---------- */
+.dash-dropdown,
+.dash-dropdown-trigger,
+.dash-dropdown-wrapper {
+  --Dash-Fill-Inverse-Strong: #0D2235;
+  --Dash-Text-Strong: #E8F0F5;
+  --Dash-Text-Weak: #8BA3B0;
+  --Dash-Text-Disabled: #6B8CA4;
+  --Dash-Stroke-Strong: #1E4060;
+  --Dash-Fill-Interactive-Strong: #E8A830;
+  --Dash-Fill-Interactive-Weak: #163248;
+  --Dash-Fill-Disabled: #1A3A52;
+  --Dash-Shading-Strong: rgba(0, 0, 0, 0.5);
+  --Dash-Shading-Weak: rgba(0, 0, 0, 0.3);
+}
+
+/* ---------- Dropdown trigger element (closed state) ---------- */
+.dash-dropdown {
+  background: #0D2235 !important;
+  color: #E8F0F5 !important;
+  border-color: #1E4060 !important;
+}
+
+.dash-dropdown:focus {
+  border-color: #E8A830 !important;
+  outline-color: #E8A830 !important;
+}
+
+/* ---------- Selected value and placeholder text ---------- */
+.dash-dropdown-value {
+  color: #E8F0F5 !important;
+}
+
+.dash-dropdown-placeholder {
+  color: #6B8CA4 !important;
+}
+
+/* ---------- Trigger icon (chevron) ---------- */
+.dash-dropdown-trigger-icon {
+  color: #8BA3B0 !important;
+  fill: #8BA3B0 !important;
+}
+
+/* ---------- Clear button ---------- */
+.dash-dropdown-clear {
+  color: #6B8CA4 !important;
+}
+
+.dash-dropdown-clear:hover {
+  color: #E8A830 !important;
+}
+
+/* ============================================================
+   Popup panel — Radix UI teleports this to <body> so CSS
+   variables from .dash-dropdown-wrapper don't cascade here.
+   Every property must be set explicitly on this element.
+   ============================================================ */
+.dash-dropdown-content {
+  --Dash-Fill-Inverse-Strong: #0F2A3F;
+  --Dash-Text-Strong: #E8F0F5;
+  --Dash-Text-Weak: #8BA3B0;
+  --Dash-Text-Disabled: #6B8CA4;
+  --Dash-Stroke-Strong: #1E4060;
+  --Dash-Fill-Interactive-Strong: #E8A830;
+  --Dash-Fill-Interactive-Weak: #163248;
+  --Dash-Fill-Disabled: #1A3A52;
+  --Dash-Shading-Strong: rgba(0, 0, 0, 0.5);
+  --Dash-Shading-Weak: rgba(0, 0, 0, 0.3);
+  background: #0F2A3F !important;
+  border-color: #1E4060 !important;
+  color: #E8F0F5 !important;
+}
+
+/* ---------- Search container inside popup ---------- */
+.dash-dropdown-search-container {
+  background: #0D2235 !important;
+  border-color: #1E4060 !important;
+}
+
+.dash-dropdown-search-container:focus-within {
+  border-color: #E8A830 !important;
+  outline-color: #E8A830 !important;
+}
+
+/* ---------- Search input text ---------- */
+.dash-dropdown-search {
+  color: #E8F0F5 !important;
+  background: transparent !important;
+}
+
+/* ---------- Individual options ---------- */
+.dash-dropdown-option {
+  background: #0F2A3F !important;
+  color: #8BA3B0 !important;
+  font-family: system-ui, -apple-system, sans-serif !important;
+  font-size: 12px !important;
+}
+
+.dash-dropdown-option:hover {
+  background: #163248 !important;
+  color: #E8F0F5 !important;
+}
+
+/* Selected option (aria attribute set by Radix/Dash) */
+.dash-dropdown-option:has(input[type='radio']:checked),
+.dash-dropdown-option:has(input[type='checkbox']:checked) {
+  background: #1A3A52 !important;
+  color: #E8A830 !important;
+  font-weight: 600 !important;
+}
+
+/* ---------- Action buttons (Select All / Clear) ---------- */
+.dash-dropdown-action-button {
+  color: #6B8CA4 !important;
+}
+
+.dash-dropdown-action-button:hover {
+  color: #E8A830 !important;
+}
+
+/* ---------- Slider track and handle ---------- */
+.rc-slider-track {
+  background-color: #1A3A52 !important;
+}
+
+.rc-slider-handle {
+  border-color: #E8A830 !important;
+  background-color: #E8A830 !important;
+}
+
+.rc-slider-handle:hover,
+.rc-slider-handle:active {
+  border-color: #E8A830 !important;
+  box-shadow: 0 0 0 4px rgba(232, 168, 48, 0.2) !important;
+}
+
+.rc-slider-mark-text {
+  color: #6B8CA4 !important;
+  font-family: system-ui, -apple-system, sans-serif !important;
+  font-size: 11px !important;
+}
+
+/* ---------- Tab container bg ---------- */
+.tab-container {
+  background-color: #0F2A3F !important;
+}
+
+/* ---------- Input focus ring ---------- */
+.input-focus-effect:focus {
+  outline: none !important;
+  border-color: #E8A830 !important;
+  box-shadow: 0 0 0 2px rgba(232, 168, 48, 0.2) !important;
+}
+
+/* ---------- Button hover ---------- */
+.button-hover-effect:hover {
+  background-color: #1E4060 !important;
+  border-color: #E8A830 !important;
+  color: #E8A830 !important;
+}
+
+/* ---------- Checklist label ---------- */
+.dash-checklist label {
+  color: #6B8CA4 !important;
+  font-family: system-ui, -apple-system, sans-serif !important;
+  font-size: 11px !important;
+}

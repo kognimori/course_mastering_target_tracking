@@ -1,0 +1,129 @@
+{
+    "paths": {
+        "object_state_templates": [
+            "..",
+            "input",
+            "object_motion_parameters.json"
+        ],
+        "measurements_templates": [
+            "..",
+            "input",
+            "measurements.json"
+        ]
+    },
+    "simulation_parameters": {
+        "steps": 1000,
+        "time_step": 1
+    },
+    "scenario_parameters": {
+        "num_states": 4,
+        "states": "1",
+        "stateTypes": {
+            "0": [
+                "range"
+            ],
+            "1": [
+                "vx",
+                "vy",
+                "x",
+                "y"
+            ]
+        },
+        "measurements": "4",
+        "measurementsTypes": {
+            "0": [
+                "range"
+            ],
+            "1": [
+                "azimuth"
+            ],
+            "2": [
+                "azimuth",
+                "range"
+            ],
+            "3": [
+                "azimuth",
+                "range",
+                "doppler"
+            ],
+            "4": [
+                "rangex",
+                "rangey",
+                "doppler"
+            ]
+        },
+        "meas_noise_actual": {
+            "range": 0.1,
+            "azimuth": 0.1,
+            "doppler": 0.1
+        },
+        "meas_noise_guess": {
+            "range": 0.1,
+            "azimuth": 0.1,
+            "doppler": 0.1,
+            "rangex": 0.1,
+            "rangey": 0.1
+        },
+        "process_noise": 0.001,
+        "initial_state_guess": {
+            "range": 100,
+            "x": 70,
+            "y": -70,
+            "vx": 0.5,
+            "vy": 0.5
+        },
+        "initial_covariance_guess": {
+            "range": 20000,
+            "x": 20000,
+            "y": 20000,
+            "vx": 10,
+            "vy": 10
+        }
+    },
+    "initial_states": {
+        "sensor": {
+            "range": -100,
+            "azimuth": 0,
+            "speed": 1,
+            "acceleration": 0,
+            "yaw": 30,
+            "yawrate": 0,
+            "yawraterate": 0
+        },
+        "target": {
+            "range": 200,
+            "azimuth": 0,
+            "speed": 1,
+            "acceleration": 0,
+            "yaw": 45,
+            "yawrate": 0,
+            "yawraterate": 0
+        }
+    },
+    "trajectory_parameters": {
+        "selection": {
+            "sensor": "FreeTraj",
+            "target": "FreeTraj"
+        },
+        "FreeTraj": {
+            "sensor": {},
+            "target": {}
+        },
+        "STraj": {
+            "sensor": {
+                "turnRate": 0.5
+            },
+            "target": {
+                "turnRate": 0.6
+            }
+        },
+        "FreeTurnTraj": {
+            "sensor": {
+                "turnRate": 0.5
+            },
+            "target": {
+                "turnRate": 0.6
+            }
+        }
+    }
+}

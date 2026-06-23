@@ -1,0 +1,24 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css');
+.button-hover-effect:hover {
+    background-color: #4CAF50; /* Green background on hover */
+    color: white; /* White text */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.button-hover-effect {
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+.input-focus-effect:focus {
+    border-color: #4CAF50; /* Green border */
+    box-shadow: 0 0 8px 0 rgba(76,175,80,0.6); /* Slight glow */
+    outline: none; /* Removes the default focus outline */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+.dropdown-hover-effect:hover .Select-control {
+    background-color: #f0f0f0; /* Light gray background */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+.Select-control {
+    height: 30px !important;
+    min-height: 30px !important;
+}
